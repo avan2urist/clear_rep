@@ -113,29 +113,36 @@ async def start_or_reboot(message: types.Message, state: FSMContext):
         pass
     
     keyboard = InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(
-                text="⚡ ЗАПУСК", 
-                callback_data="start_generation"
+    inline_keyboard=[
+        [InlineKeyboardButton(
+            text="⚡ ЗАПУСК", 
+            callback_data="start_generation"
+        )],
+        [
+            InlineKeyboardButton(
+                text="🆘 ПОДДЕРЖКА",
+                url="https://t.me/dmitriy_suport"
+            )
+        ],
+        [
+        InlineKeyboardButton(
+                text="👥 СООБЩЕСТВО",
+                url="https://t.me/+Tdv63Zjq8oQwZjcy"
+            )
+        ],
+        
+        [
+            InlineKeyboardButton(
+                text="📚 РУКОВОДСТВО",
+                callback_data="user_guide"
             )],
-            [
-                InlineKeyboardButton(
-                    text="🆘 ПОДДЕРЖКА",
-                    url="https://t.me/dmitriy_suport"
-                )],
-                [
-                InlineKeyboardButton(
-                    text="📚 РУКОВОДСТВО",
-                    callback_data="user_guide"
-                ),
-                
-            ],
-            [InlineKeyboardButton(
-                text="🌐 ОФИЦИАЛЬНЫЙ БРОКЕР",
-                url="https://u3.shortink.io/smart/z708hoWjVDKFSQ"
-            )]
-        ]
-    )
+            
+        [InlineKeyboardButton(
+            text="🌐 ОФИЦИАЛЬНЫЙ БРОКЕР",
+            url="https://u3.shortink.io/smart/z708hoWjVDKFSQ"
+        )]
+    ]
+)
     
     welcome_text = f"""
 <b>✨ {user_name}, добро пожаловать в </b><b><i>QuantumTrade AI</i></b><b> — вашего персонального аналитика!</b>
