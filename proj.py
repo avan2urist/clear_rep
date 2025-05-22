@@ -118,9 +118,21 @@ async def start_or_reboot(message: types.Message, state: FSMContext):
                 text="⚡ ЗАПУСК", 
                 callback_data="start_generation"
             )],
+            [
+                InlineKeyboardButton(
+                    text="🆘 ПОДДЕРЖКА",
+                    url="https://t.me/dmitriy_suport"
+                ),
+                InlineKeyboardButton(
+                    text="📚 РУКОВОДСТВО",
+                    callback_data="user_guide"
+                ),
+                
+            ],
             [InlineKeyboardButton(
-                text="📚 РУКОВОДСТВО",
-                callback_data="user_guide")]
+                text="🌐 ОФИЦИАЛЬНЫЙ БРОКЕР",
+                url="https://u3.shortink.io/smart/z708hoWjVDKFSQ"
+            )]
         ]
     )
     
@@ -147,7 +159,7 @@ async def start_or_reboot(message: types.Message, state: FSMContext):
 
 🚀 <b>Готовы начать?</b>  
 
-Нажмите кнопку ниже, чтобы получить <b><i>первый сигнал уже через 30 секунд!</i></b>  
+Нажмите кнопку ниже, чтобы получить <b><i>первый сигнал уже через несколько секунд секунд!</i></b>  
 """
     
     try:
