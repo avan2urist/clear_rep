@@ -122,7 +122,8 @@ async def start_or_reboot(message: types.Message, state: FSMContext):
                 InlineKeyboardButton(
                     text="🆘 ПОДДЕРЖКА",
                     url="https://t.me/dmitriy_suport"
-                ),
+                )],
+                [
                 InlineKeyboardButton(
                     text="📚 РУКОВОДСТВО",
                     callback_data="user_guide"
